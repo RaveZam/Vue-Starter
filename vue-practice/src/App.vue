@@ -1,6 +1,6 @@
 <template>
-  <div class="bg-red-200">
-    <h1 class="text-red-200">Hello</h1>
+  <div>
+    <h1>Hello</h1>
     <h1>{{ counter }}</h1>
     <button @click="logMessage">Click</button> <br />
     <button @click="logHelloMessage">Click</button>
