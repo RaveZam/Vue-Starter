@@ -1,6 +1,7 @@
 <template>
-  <div>
-    <h1>Hello</h1>
+  <div class="bg-red-200">
+    <h1 class="text-red-200">Hello</h1>
+    <h1>{{ counter }}</h1>
     <button @click="logMessage">Click</button> <br />
     <button @click="logHelloMessage">Click</button>
   </div>
@@ -10,13 +11,19 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
+  data() {
+    return {
+      counter: 0,
+    };
+  },
+
   methods: {
     logMessage(): void {
       console.log("Button was pressed!");
     },
 
     logHelloMessage(): void {
-      console.log("Hello World");
+      this.counter++;
     },
   },
 });
